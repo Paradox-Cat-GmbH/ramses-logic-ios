@@ -273,7 +273,7 @@ namespace rlogic
                 auto* obj = m_logicEngine.findLogicObjectById(static_cast<uint64_t>(*intKey));
                 if (obj != nullptr)
                 {
-                    node = obj->as<rlogic::LogicNode>();
+                    node = obj->template as<rlogic::LogicNode>();
                 }
             }
         }

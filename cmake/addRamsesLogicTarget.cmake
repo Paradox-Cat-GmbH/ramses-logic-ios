@@ -15,6 +15,9 @@ function(add_ramses_logic_target TARGET_NAME LIB_TYPE)
     set_target_properties(${TARGET_NAME} PROPERTIES
             PUBLIC_HEADER "${public_headers}"
         )
+    target_sources(${TARGET_NAME}
+        PRIVATE lib/impl/Dummy.cpp)
+        
     if(${LIB_TYPE} STREQUAL "STATIC")
         # no special additional properties for static lib required"
     elseif(${LIB_TYPE} STREQUAL "SHARED")

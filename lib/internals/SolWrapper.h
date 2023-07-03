@@ -26,6 +26,7 @@ __pragma(warning(push))
 __pragma(warning(disable: 4100))
 #endif
 
+#define SOL_NO_NIL 1
 #include "sol/sol.hpp"
 
 #ifndef _MSC_VER

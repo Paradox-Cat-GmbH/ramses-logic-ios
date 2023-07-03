@@ -82,12 +82,17 @@ if(ramses-logic_BUILD_RAMSES_RENDERER)
             set(ramses-logic_PLATFORM "WINDOWS")
         elseif(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
             set(ramses-logic_PLATFORM "LINUX-X11")
+        elseif(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
+            set(ramses-logic_PLATFORM "DARWIN")
         elseif(${CMAKE_SYSTEM_NAME} MATCHES "Android")
             set(ramses-logic_PLATFORM "ANDROID")
+        elseif(${CMAKE_SYSTEM_NAME} MATCHES "iOS")
+            set(ramses-logic_PLATFORM "DARWINIOS")
+            SET(CMAKE_XCODE_GENERATE_SCHEME ON)
+            SET(ramses-logic_ENABLE_FLATBUFFERS_GENERATION OFF)
         endif()
     endif()
 endif()
-
 #==========================================================================
 # Global project setup
 #==========================================================================

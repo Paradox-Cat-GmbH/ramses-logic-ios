@@ -33,7 +33,7 @@ namespace rlogic::internal
         template <EPropertyType type>
         [[nodiscard]] static sol::object CreatePrimitiveType(sol::this_state state, const sol::object& /*unused*/)
         {
-            return sol::object(state, sol::in_place_type<InterfaceTypeInfo>, InterfaceTypeInfo{ type, 0u, sol::nil });
+            return sol::object(state, sol::in_place_type<InterfaceTypeInfo>, InterfaceTypeInfo{ type, 0u, sol::lua_nil });
         }
     };
 }
