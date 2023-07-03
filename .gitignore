@@ -1,4 +1,5 @@
 build/
+buildios/
 .vscode/
 **/__pycache__/
 venv/

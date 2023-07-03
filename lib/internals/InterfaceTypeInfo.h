@@ -18,6 +18,6 @@ namespace rlogic::internal
     {
         EPropertyType typeId = EPropertyType::Struct;
         size_t arraySize = 0u;
-        sol::object complexType = sol::nil;
+        sol::object complexType = sol::lua_nil;
     };
 }

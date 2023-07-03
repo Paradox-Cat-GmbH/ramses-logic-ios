@@ -21,7 +21,7 @@ jobs:
     # Newest -> so that we can test with latest tools (clang-tidy) and use recent drivers/packages
     strategy:
       matrix:
-        os: [ubuntu-20.04, ubuntu-latest, windows-latest]
+        os: [ubuntu-20.04, ubuntu-lates, windows-latest]
 
     steps:
     - uses: actions/checkout@v3

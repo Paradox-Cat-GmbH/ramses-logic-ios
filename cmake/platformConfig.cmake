@@ -139,6 +139,11 @@ IF(${CMAKE_SYSTEM_NAME} MATCHES "Android")
     SET(ENV{PKG_CONFIG_SYSROOT_DIR} ${CMAKE_SYSROOT})
 ENDIF()
 
+IF((${CMAKE_SYSTEM_NAME} MATCHES "iOS") OR (${CMAKE_SYSTEM_NAME} MATCHES "Darwin")) 
+    SET(CMAKE_XCODE_GENERATE_SCHEME ON)
+    SET(CMAKE_ARCHIVE_OUTPUT_DIRECTORY, "./out")
+ENDIF()
+
 # Special handling for C++17 filesystem
 # Unfortunately not trivial, please keep this CMake config in one place!
 
